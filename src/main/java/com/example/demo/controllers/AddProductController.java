@@ -126,6 +126,30 @@ public class AddProductController {
 
         return "confirmationdeleteproduct";
     }
+    
+    @GetMapping("/buyProduct")
+    public String buyProduct(@RequestParam("productID") int theId, Model theModel) {
+        // intialize productService bean through spring context
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+        // create a product object called product2
+        Product product2=productService.findById(theId);
+        // creating a variable to store the value of the product
+        int inv = product2.getInv();
+        //checking to see if inv is 0
+        if (inv == 0) {
+            // returning failure.html page
+            return "failureproduct";
+        } else {
+            // decrementing the value of inv by 1
+            product2.setInv(inv - 1);
+            // set new value of inv to product2
+
+            // save product2 with the new value of inv
+            productService.save(product2);
+            // returning success.html page
+            return "successproduct";
+        }
+    }
 
     public AddProductController(PartService partService) {
         this.partService = partService;

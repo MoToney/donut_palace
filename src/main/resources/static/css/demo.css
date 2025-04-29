@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+    border: 10px solid #4d0b06;
+}
+
+body {
+    
+    justify-content: center;
+    
+    color: #DA9929;
+    border: 1px solid white;
+}
+
+.navbar-brand {
+    font: bold 2em 'Lobster', sans-serif;
+    color: black;}
