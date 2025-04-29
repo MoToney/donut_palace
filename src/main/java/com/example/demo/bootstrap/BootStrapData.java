@@ -46,12 +46,16 @@ public class BootStrapData implements CommandLineRunner {
             glazedDonut.setInv(5);
             glazedDonut.setPrice(0.99);
             glazedDonut.setId(1L);
+            glazedDonut.setMaxInv(10);
+            glazedDonut.setMinInv(1);
             partRepository.save(glazedDonut);
 
             InhousePart chocolateDonut = new InhousePart();
             chocolateDonut.setName("Chocolate Donut");
             chocolateDonut.setInv(10);
             chocolateDonut.setPrice(1.49);
+            chocolateDonut.setMaxInv(20);
+            chocolateDonut.setMinInv(2);
             chocolateDonut.setId(2L);
             partRepository.save(chocolateDonut);
 
@@ -59,6 +63,8 @@ public class BootStrapData implements CommandLineRunner {
             becCroissant.setName("Bacon,Egg,Cheese Croissant");
             becCroissant.setInv(7);
             becCroissant.setPrice(2.99);
+            becCroissant.setMaxInv(15);
+            becCroissant.setMinInv(1);
             becCroissant.setId(3L);
             partRepository.save(becCroissant);
 
@@ -66,6 +72,8 @@ public class BootStrapData implements CommandLineRunner {
             donutHoles.setName("Donut Holes");
             donutHoles.setInv(12);
             donutHoles.setPrice(0.49);
+            donutHoles.setMaxInv(20);
+            donutHoles.setMinInv(5);
             donutHoles.setId(4L);
             partRepository.save(donutHoles);
 
@@ -74,6 +82,8 @@ public class BootStrapData implements CommandLineRunner {
             cFrappe.setInv(3);
             cFrappe.setPrice(3.99);
             cFrappe.setId(5L);
+            cFrappe.setMaxInv(10);
+            cFrappe.setMinInv(1);
             cFrappe.setCompanyName("McDonald's");
             outsourcedPartRepository.save(cFrappe);
         }
@@ -98,9 +108,8 @@ public class BootStrapData implements CommandLineRunner {
             System.out.println(partRepository.findAll());
         }
     }
-
-
 }
+
 /*
  * OutsourcedPart o= new OutsourcedPart();
  * o.setCompanyName("Western Governors University");
