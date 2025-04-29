@@ -76,6 +76,7 @@
                             class="btn btn-primary btn-sm mb-3">Update</a>
                         <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
                             onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
+                        <a th:href="@{/buyPart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Buy Now</a>
                     </td>
                 </tr>
             </tbody>
@@ -114,6 +115,8 @@
                             class="btn btn-primary btn-sm mb-3">Update</a>
                         <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                             onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
+                        <a th:href="@{/buyProduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Buy
+                            Now</a>
                     </td>
                 </tr>
             </tbody>
