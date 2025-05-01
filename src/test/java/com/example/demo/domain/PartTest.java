@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import java.lang.Exception;
 
 /**
  * Project: demoDarbyFrameworks2-master
@@ -156,4 +158,41 @@ class PartTest {
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
     }
+
+    @Test
+    void setMinInv() {
+        int minInv=1;
+        partIn.setMinInv(minInv);
+        assertEquals(minInv, partIn.getMinInv());
+        partOut.setMinInv(minInv);
+        assertEquals(minInv, partOut.getMinInv());
+    }
+    
+    @Test
+    void getMinInv() {
+        int minInv=1;
+        partIn.setMinInv(minInv);
+        assertEquals(minInv, partIn.getMinInv());
+        partOut.setMinInv(minInv);
+        assertEquals(minInv, partOut.getMinInv());
+    }
+    
+    @Test
+    void setMaxInv() {
+        int maxInv=10;
+        partIn.setMaxInv(maxInv);
+        assertEquals(maxInv, partIn.getMaxInv());
+        partOut.setMaxInv(maxInv);
+        assertEquals(maxInv, partOut.getMaxInv());
+    }
+    
+    @Test
+    void getMaxInv() {
+        int maxInv=10;
+        partIn.setMaxInv(maxInv);
+        assertEquals(maxInv, partIn.getMaxInv());
+        partOut.setMaxInv(maxInv);
+        assertEquals(maxInv, partOut.getMaxInv());
+    }
+
 }
