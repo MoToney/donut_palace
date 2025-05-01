@@ -46,7 +46,7 @@
     <div class="container">
         <h1>Shop</h1>
         <hr>
-        <h2>Parts</h2>
+        <h2>Items</h2>
         <form th:action="@{/mainscreen}">
             Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}"
                 required />
@@ -56,8 +56,8 @@
             <input type="button" value="Clear" id="btnClearPart" onclick="clearSearch()" />
         </form>
         <br><br>
-        <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Inhouse Part</a>
-        <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Outsourced Part</a>
+        <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Inhouse Item</a>
+        <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Outsourced Item</a>
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -85,7 +85,7 @@
                 </tr>
             </tbody>
         </table>
-        <h2>Products</h2>
+        <h2>Meals</h2>
         <form th:action="@{/mainscreen}">
             Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}"
                 required />
@@ -100,7 +100,7 @@
             }
         </script>
         <br><br>
-        <a th:href="@{/showFormAddProduct}" class="btn btn-primary btn-sm mb-3">Add Product</a>
+        <a th:href="@{/showFormAddProduct}" class="btn btn-primary btn-sm mb-3">Add Meals</a>
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>

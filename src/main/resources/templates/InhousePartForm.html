@@ -5,12 +5,12 @@
 <head>
     <link rel="stylesheet" th:href="@{/css/demo.css}" />
     <meta charset="UTF-8">
-    <title>Part Form</title>
+    <title>Item Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-    <h1>Inhouse Part Detail</h1>
+    <h1>Inhouse Item Detail</h1>
     <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST">
 
         <!-- Add hidden form field to handle update -->
@@ -49,7 +49,7 @@
         <p th:if="${#fields.hasErrors('maxInv')}" th:errors="*{maxInv}">Maximum Inventory Error</p>
 
         <p>
-            <label th:for="*{partId}">Part ID:</label>
+            <label th:for="*{partId}">Item ID:</label>
             <input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4" />
         </p>
 
