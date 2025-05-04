@@ -1279,3 +1279,33 @@ if (p.getInv()<(product.getInv()-myProduct.getInv())) {
 <h1>You bought the meal.</h1>
 ```
 
+### Correcting the interface because it does not have a shop name or part names displayed. 
+**File name: mainscreen.html**
+*Line number: 26 | Changes: removed the reference to "Donut Palace" in the navbar
+```
+<a class="navbar-brand" href="/mainscreen">
+	<img th:src="@{/images/logo.jpg}" alt="Logo" width="55" height="55">
+    </a>
+```
+*Line number: 47 and 49 | Changes: changed the reference to "Shop" to "The Donut Palace" and changed the reference to "Items" to "A La Carte Items"*
+```
+<h1>The Donut Palace</h1>
+```
+
+```
+<h2>A La Carte Items</h2>
+```
+
+**File name: about.html**
+*Line number: 21 | Changes: removed the reference to "Donut Palace" in the navbar and changed the href to "/about"*
+```
+<a class="navbar-brand" href="/about">
+	<img th:src="@{/images/logo.jpg}" alt="Logo" width="55" height="55">
+    </a>
+```
+
+*Line number: 40 and 41 | Changes: references to "Donut Palace" changed to "The Donut Palace"*
+```
+<h1>About The Donut Palace</h1>
+<p>Welcome to The Donut Palace, where we serve the best donuts in town!</p>
+```
